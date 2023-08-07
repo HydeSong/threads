@@ -5,7 +5,6 @@ import { redirect } from "next/navigation"
 
 const Page = async () => {
     const user = await currentUser()
-    console.log(user)
     if(!user) return null
 
     const userInfo = await fetchUser(user.id)
@@ -13,7 +12,7 @@ const Page = async () => {
 
     return (
         <>
-            <h1 className="head-text">Create thread</h1>
+            <h1 className="head-text">Create Thread</h1>
             <PostThread userId={userInfo._id}/>
         </>
     )
