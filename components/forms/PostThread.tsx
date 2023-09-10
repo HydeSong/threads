@@ -55,7 +55,7 @@ const PostThread = ({userId} : Props) => {
                             Content
                         </FormLabel>
                         <FormControl className="no-focus border border-dark-4 bg-dark-3 text-light-1">
-                            <Textarea rows={15} className="account-form_input" {...field}/>
+                            <Textarea rows={15} {...field}/>
                         </FormControl>
                         <FormMessage/>
                     </FormItem>
