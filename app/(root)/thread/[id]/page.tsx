@@ -26,7 +26,8 @@ const Page = async ({params}: Props) => {
         <section className="relative">
             <div>
                 <ThreadCard
-                    id={params.id}
+                    key={thread._id}
+                    id={thread._id}
                     currentUserId={user?.id || ''} 
                     parentId={thread.parentId}
                     content={thread.text}
@@ -38,7 +39,12 @@ const Page = async ({params}: Props) => {
             </div>
 
             <div className="mt-7">
-                <Comment />
+                <Comment
+                    threadId={thread.id}
+                    currentUserImg={user.imageUrl}
+                    currentUserId={JSON.stringify(userInfo._id)} 
+
+                />
             </div>
         </section>
     )
